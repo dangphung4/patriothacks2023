@@ -13,13 +13,22 @@ Migrations: These are files that Django generates to create or change database t
 
 To run locally, clone the repo and enter this into terminal:
 
+
+## Setup Instructions
+
+### Clone the Repository
+```bash
+git clone git@github.com:dangphung4/patriothacks2023.git
+cd patriothacks2023
+```
+
 Install dependencies with :
 ```bash
 pip install -r requirements.txt
 ```
 Run migrations using :
 ```bash
-cd patriothack2023
+cd patriothacks2023
 python3 manage.py migrate
 python3 manage.py runserver
 ```
