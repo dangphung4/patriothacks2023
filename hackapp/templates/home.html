@@ -1,0 +1,25 @@
+<!-- home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+    <h1>Welcome to Our Hackathon Project!</h1>
+    
+    {% if user.is_authenticated %}
+        <p>Hello, {{ user.username }}! Thank you for logging in.</p>
+        <a href="{% url 'logout' %}">Logout</a>
+        <p>See the list of <a href="{% url 'user_list' %}">all users</a>.</p>
+    {% else %}
+        <p>You are not logged in.</p>
+        <a href="{% url 'login' %}">Login</a> |
+        <a href="{% url 'register' %}">Register</a>
+    {% endif %}
+
+    <p>This is the homepage for our hackathon project</p>
+</body>
+</html>
